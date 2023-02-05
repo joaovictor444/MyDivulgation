@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3486b4745c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- SESSION HEADER -->
+    <header>
+        <div class="user">
+            <img src="images/user-profile.jpeg" alt="">
+            <h3 class="name">João Victor</h3>
+            <p class="post">Front e Back End Developer</p>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="https://www.instagram.com/ujoaozinho9090/" class="instagram">Instagram <i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://discord.com/channels/@me" class="discord">Discord <i class="fa-brands fa-discord"></i></a></li>
+                <li><a href="https://github.com/joaovictor444?tab=repositories" class="github">GitHub <i class="fa-brands fa-github"></i></a></li>
+                <li><a href="#" class="linkedin">Linkedin <i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://wa.me/5511912684254" class="whatsapp">WhatsApp <i class="fa-brands fa-whatsapp"></i></a></li>
+
+                <!-- MULTI - LINGUAGENS -->
+
+                <div class="langWrap">
+                   <a href="#" language='brasil' class="active"><img src="images/language-brasil.png" alt="" class="brasil"></a>
+                   <a href="#" language='english'><img src="images/language-usa.png" alt="" class="usa"></a>
+                   <a href="#" language='espanhol'><img src="images/language-esp.png" alt="" class="espanhol"></a>
+                   <a href="#" language='japanese'><img src="images/language-jap.png" alt="" class="japanese"></a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECTION CONTENT -->
+
+    <section class="home" id="home">
+        <h3 class="title1">Olá</h3>
+        <h1 class="title2">Eu sou o <span class="title">João Victor</span></h1>
+        <p class="description">Opa como vocês estão? Sou estudante da ETEC de Santa-Isabel, e estou cursando Informática para Internet. E esse site fiz com o intuito de divulgar minhas redes sociais, e mostrar um pouco de minhas skils em questões de linguagens de programação. Espero que gostem do meu trabalho :)</p>
+    </section>
+</body>
+<script>
+    const langEl = document.querySelector('.langWrap');
+    const link = document.querySelectorAll('a');
+    const titleEl1 = document.querySelector('.title1');
+    const titleEl2 = document.querySelector('.title2');
+    const titleEl = document.querySelector('.title');
+    const btnEl = document.querySelector('.btnlan');
+    const descriptionEl = document.querySelector('.description');
+
+    link.forEach(el => {
+        el.addEventListener('click', () => {
+            langEl.querySelector('.active').classList.remove('active');
+            el.classList.add('active');
+
+            const attr = el.getAttribute('language');
+            titleEl1.textContent = data[attr].title1;
+            titleEl2.textContent = data[attr].title2;
+            titleEl.textContent = data[attr].title;
+            descriptionEl.textContent = data[attr].description;
+            btnEl.textContent = data[attr].btnlan;
+        }); 
+    });
+
+    var data = {
+        "brasil":
+        {
+            "title1": "Olá",
+            "title2": "Eu sou o João Victor",
+            "title": "João Victor",
+            "description":
+                "Opa como vocês estão? Sou estudante da ETEC de Santa-Isabel, e estou cursando Informática para Internet. E esse site fiz com o intuito de divulgar minhas redes sociais, e mostrar um pouco de minhas skils em questões de linguagens de programação. Espero que gostem do meu trabalho :)",
+            "btnlan": "Mais Projetos Em Breve"
+        },
+        "english":
+        {
+            "title1": "Hello",
+            "title2": "I am the João Victor",
+            "title": "João Victor",
+            "description":
+                "Oops how are you? I'm a student at ETEC in Santa-Isabel, and I'm studying Computers for the Internet. And I made this site with the intention of publicizing my social networks, and showing a little of my skills in programming language issues. I hope you like my work :)",
+            "btnlan": "More Projects Coming Soon..."
+        },
+        "espanhol":
+        {
+            "title1": "Hola",
+            "title2": "Yo soy el João Victor",
+            "title": "João Victor",
+            "description":
+                "Ups, ¿cómo estás? Soy estudiante de ETEC en Santa-Isabel, y estoy estudiando Computación para Internet. Y realicé este sitio con la intención de dar a conocer mis redes sociales, y mostrar un poco de mis habilidades en temas de lenguajes de programación. Espero que les guste mi trabajo :)",
+            "btnlan": "Más proyectos próximamente..."
+        },
+        "japanese":
+        {
+            "title1": "こんにちは",
+            "title2": "私は João Victor",
+            "title": "João Victor",
+            "description":
+                "おっと、お元気ですか？私は Santa-Isabel の ETEC の学生で、インターネット用のコンピューターを勉強しています。このサイトを作成した目的は、私のソーシャル ネットワークを宣伝し、プログラミング言語の問題に関する私のスキルを少しだけ示すことでした。あなたが私の作品を気に入ってくれることを願っています:)",
+            "btnlan": "近日公開予定のその他のプロジェクト..."
+        }
+    }
+</script>
+</html>

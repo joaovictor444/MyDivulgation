@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    transition: all .2 linear;
+}
+
+*::selection{
+    background-color: #fff;
+    color: #333;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden; 
+}
+
+html::-webkit-scrollbar{
+    background-color: #222;   
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: #330a60;   
+}
+
+body{
+    background: linear-gradient(to left, #061227, #05255b, #040f34);
+    overflow-x: hidden;
+    padding-left: 35rem;
+    background-size: 500% 100%;
+    animation: degrade 3s infinite alternate;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    border: .7rem solid #f3f3f3;
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+
+header .user .post{
+    font-size: 2rem;
+    color: #fff;
+}
+
+header .navbar{
+    width: 100%;
+}
+
+header .navbar ul{
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.instagram{
+    background: linear-gradient(to left, #FE3978, #D32EB0, #FF9D26, #FF5C3B, #6A3BD2, #FFEFC8);
+    animation:  button-social-midia 2s infinite alternate;
+    background-size: 500% 100%;
+}
+
+.discord{
+    background: linear-gradient(to left, #5765F2, #666ec4, #4d56c0, #3c427c, #232a78, #3a73ab, #ffffff);
+    animation:  button-social-midia 2s infinite alternate;
+    background-size: 500% 100%;
+}
+
+.github{
+    background: linear-gradient(to left, #3B0491, #7A1BCA, #B99CCE, #D878E0, #7C91FF, #3a73ab);
+    animation:  button-social-midia 2s infinite alternate;
+    background-size: 500% 100%;
+}
+
+.linkedin{
+    background: linear-gradient(to left, #017AB7, #3699cb, #2580d0, #544cdc, #2e93cd, #157adf);
+    animation:  button-social-midia 2s infinite alternate;
+    background-size: 500% 100%;
+}
+
+.whatsapp{
+    background: linear-gradient(to left, #18C047, #67ca83, #216935, #205830, #08ad37, #2ec559);
+    animation:  button-social-midia 2s infinite alternate;
+    background-size: 500% 100%;
+}
+
+.btn{
+    padding:.7rem 3rem;
+    background: linear-gradient(to left, #061227, #05255b, #040f34);
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+    background-size: 500% 100%;
+    animation: button-profile 2s infinite alternate;
+}
+
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+    letter-spacing: 2px;
+    transition: .5s ease-in-out;
+}
+
+header .navbar ul li a:hover{
+    transition: .5s ease-in-out;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+}
+
+.home h1 span{
+    color: #f3f3f3;
+}
+
+.home p{
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+
+.heading span{
+    color: #E42424;
+}
+
+@keyframes degrade{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+
+@keyframes button-profile{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+
+@keyframes button-social-midia{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+/*-- MULTI - LINGUAGENS -- */
+
+.brasil{
+    height: 11rem;
+    width: 11rem;
+    margin-top: 320px;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.usa{
+    height: 11rem;
+    width: 11rem;
+    margin-top: 318px;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.espanhol{
+    height: 11rem;
+    width: 11rem;
+    margin-top: 320px;
+    top: 50%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.japanese{
+    height: 12.5rem;
+    width: 12.5rem;
+    margin-top: 317px;
+    top: 50%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
