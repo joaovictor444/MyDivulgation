@@ -30,11 +30,11 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background: linear-gradient(to left, #061227, #05255b, #040f34);
+    background: linear-gradient(to left, #1a1a1a, #515151, #303030);
     overflow-x: hidden;
     padding-left: 35rem;
     background-size: 500% 100%;
-    animation: degrade 3s infinite alternate;
+    animation: degrade 1s infinite alternate;
 }
 
 section{
